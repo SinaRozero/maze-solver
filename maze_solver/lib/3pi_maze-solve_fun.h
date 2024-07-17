@@ -52,7 +52,7 @@ void display_path()  //LCD顯示線迷宮路徑,"LSR..."
   }
 }
 //========================================================================
-unsigned char select_turn(unsigned char found_left, unsigned char found_straight, unsigned char found_right)	//Left or Right path  first rule
+unsigned char select_turn(unsigned char found_left, unsigned char found_straight, unsigned char found_right, unsigned int rule_check)	//Left or Right path  first rule
 {
   if (rule_check == 0) {
   if (found_left)

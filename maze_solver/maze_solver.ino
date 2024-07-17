@@ -16,7 +16,7 @@ unsigned int blackValue = 600;  //設定 black area value
 
 char path[100] = "";  //設定線迷宮路徑的儲存空間,可調整參數***
 unsigned char path_length = 0; //the length of the path
-unsigned char rule_check = 0; // "0" Left Turn first, "1" Right Turn first
+unsigned int rule_check = 0; // "0" Left Turn first, "1" Right Turn first
 
 #include <avr/pgmspace.h>
 //#include "C:\Users\d218\Documents\Arduino\_3piMazeSolver_Speed120\3pi_maze-solve_fun.h"  //For Win 7 system
@@ -149,7 +149,7 @@ void loop()
         break;
       }
       
-    unsigned char dir = select_turn(found_left, found_straight, found_right);
+    unsigned char dir = select_turn(found_left, found_straight, found_right, rule_check);
 
     turn(dir);
 
